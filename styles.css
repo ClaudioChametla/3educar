@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: row;
   background-image: url(../assets/cover.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: left top;
   background-size: 100% 100%;
   overflow: hidden;
@@ -62,7 +62,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .rigth-side {
   width: 50%;
   display: flex;
@@ -70,37 +69,44 @@ body {
   align-items: center;
   justify-content: center;
 }
-.img-phone {
-  width: 45%;
-  align-self: flex-end;
-  position: absolute;
-}
-.img-mask {
-  width: 50%;
-  height: 85%;
-  position: absolute;
-  background-image: url(./assets/mask.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: 1;
-}
+
 /** Items*/
 .logo-main {
   width: 50%;
 }
 .logo-text {
   width: 90px;
-  height: 25px;
+  height: 22px;
 }
-/**Imagenes*/
 .logo-playstore {
   width: 40%;
 }
 .logo-appstore {
   width: 35%;
 }
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+}
+.img-phone {
+  width: 80%;
+}
+.img-mask {
+  width: 45%;
+  height: 100%;
+  background-image: url(./assets/mask.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 100%;
+  transform: translateY(10%);
+  animation: mask-animation infinite 4s 1s;
+}
+
 /** Fonts */
 p {
   font-size: 1vw;
@@ -116,4 +122,44 @@ p {
   font-size: 2vw;
   font-family: "pacifico";
   color: #8cae25;
+}
+
+/**Animations */
+@keyframes mask-animation {
+  0% {
+    transform: translateY(4%);
+  }
+  25% {
+    transform: translateY(6%);
+  }
+  50% {
+    transform: translateY(4%);
+  }
+  75% {
+    transform: translateY(6%);
+  }
+  100% {
+    transform: translateY(4%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .rigth-side {
+    width: 100%;
+  }
+  .img-mask {
+    background-image: url(./assets/human.png);
+  }
+}
+@media screen and (max-width: 576px) {
+  .img-mask {
+    background-image: url(./assets/dino.png);
+  }
 }
