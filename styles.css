@@ -1,15 +1,119 @@
-body{
+@font-face {
+  font-family: "pacifico";
+  src: url(./fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "zp-black";
+  src: url(./fonts/ZonaPro-Black.ttf);
+}
+@font-face {
+  font-family: "zp-extrabold";
+  src: url(./fonts/ZonaPro-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "zp-semibold";
+  src: url(./fonts/ZonaPro-SemiBold.ttf);
+}
+@font-face {
+  font-family: "zp-semiboldItalic";
+  src: url(./fonts/ZonaPro-SemiBoldItalic.ttf);
+}
+
+body {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
   background-image: url(../assets/cover.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
   overflow: hidden;
   color: #ffffff;
 }
 
-.left-side{
+/** Containers*/
+.left-side {
   width: 50%;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 100%;
+}
+.getinto {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.enjoy {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.apps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rigth-side {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.img-phone {
+  width: 45%;
+  align-self: flex-end;
+  position: absolute;
+}
+.img-mask {
+  width: 50%;
+  height: 85%;
+  position: absolute;
+  background-image: url(./assets/mask.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
+}
+/** Items*/
+.logo-main {
+  width: 50%;
+}
+.logo-text {
+  width: 90px;
+  height: 25px;
+}
+/**Imagenes*/
+.logo-playstore {
+  width: 40%;
+}
+.logo-appstore {
+  width: 35%;
+}
+/** Fonts */
+p {
+  font-size: 1vw;
+  font-family: "zp-semibold";
+  margin: 0px;
+}
+.blue-font {
+  font-size: 2vw;
+  font-family: "zp-Black";
+  color: #00bed6;
+}
+.green-font {
+  font-size: 2vw;
+  font-family: "pacifico";
+  color: #8cae25;
 }
