@@ -5,8 +5,11 @@ body{
   flex-direction: row;
   background-image: url(../assets/cover.png);
   overflow: hidden;
+  color: #ffffff;
 }
 
 .left-side{
-  
+  width: 50%;
+  display: flex;
+flex-direction: column;
 }
