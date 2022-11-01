@@ -1,0 +1,12 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-image: url(../assets/cover.png);
+  overflow: hidden;
+}
+
+.left-side{
+  
+}
