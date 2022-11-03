@@ -22,14 +22,19 @@
 body {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
   background-image: url(../assets/cover.png);
   background-repeat: repeat-y;
   background-position: left top;
   background-size: 100% 100%;
+  animation-name: fadein;
+  animation-duration: 2s;
   overflow: hidden;
-  color: #ffffff;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 /** Containers*/
@@ -40,46 +45,58 @@ body {
   justify-content: center;
   align-items: center;
 }
+.info-container {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .logo {
   width: 100%;
 }
 .getinto {
-  width: 75%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .enjoy {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 40px;
 }
 .apps {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .rigth-side {
   width: 50%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 /** Items*/
 .logo-main {
   width: 50%;
+  margin-bottom: 40px;
 }
 .logo-text {
-  width: 90px;
+  width: 100px;
   height: 22px;
 }
 .logo-playstore {
   width: 40%;
+  margin-right: 25px;
 }
 .logo-appstore {
   width: 35%;
@@ -90,10 +107,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-self: flex-end;
 }
 .img-phone {
-  width: 80%;
+  width: 90%;
 }
 .img-mask {
   width: 45%;
@@ -109,17 +125,19 @@ body {
 
 /** Fonts */
 p {
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-family: "zp-semibold";
   margin: 0px;
+  color: #ffffff;
 }
 .blue-font {
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: "zp-Black";
   color: #00bed6;
+  margin-right: 15px;
 }
 .green-font {
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: "pacifico";
   color: #8cae25;
 }
@@ -142,10 +160,36 @@ p {
     transform: translateY(4%);
   }
 }
+@keyframes body-animation {
+  0% {
+    transform: translateY(89%);
+  }
+  25% {
+    transform: translateY(90%);
+  }
+  50% {
+    transform: translateY(89%);
+  }
+  75% {
+    transform: translateY(90%);
+  }
+  100% {
+    transform: translateY(89%);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  body {
+  .slider {
     flex-direction: column;
+
     overflow-y: auto;
   }
   .left-side {
@@ -153,13 +197,45 @@ p {
   }
   .rigth-side {
     width: 100%;
+    height: 70%;
   }
   .img-mask {
+    width: 35%;
+    height: 350px;
+    position: relative;
     background-image: url(./assets/human.png);
+    transform: translateY(97%);
+    animation: body-animation infinite 4s 1s;
+  }
+  .img-phone {
+    width: 50%;
+  }
+  .steps {
+    margin-bottom: 5%;
+  }
+
+  /*Fonts*/
+  .getinto {
+    width: 95%;
+  }
+  p {
+    font-size: 3vw;
+  }
+  .blue-font,
+  .green-font {
+    font-size: 6vw;
   }
 }
 @media screen and (max-width: 576px) {
   .img-mask {
+    height: 250px;
     background-image: url(./assets/dino.png);
+  }
+  .rigth-side {
+    height: 50%;
+  }
+  .slider {
+    justify-content: end;
+    overflow-y: auto;
   }
 }
