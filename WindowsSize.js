@@ -13,3 +13,10 @@ addEventListener("resize", (e) => {
   else if (winSize > 576) image.src = "./assets/human.png";
   else image.src = "./assets/dino.png";
 });
+
+function playStoreRedirect() {
+  window.location.href = "https://play.google.com/store/games?hl=es_MX";
+}
+function appStoreRedirect() {
+  window.location.href = "https://www.apple.com/mx/app-store/";
+}

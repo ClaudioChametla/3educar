@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" type="text/css" />
     <title>Educar</title>
   </head>
-  <body onload="load($event)">
+  <body>
     <div class="slider">
       <section class="left-side">
         <div class="info-container">
@@ -37,11 +37,13 @@
                 class="logo-playstore"
                 src="./assets/playstore.png"
                 alt="googleplay"
+                onclick="playStoreRedirect()"
               />
               <img
                 class="logo-appstore"
                 src="./assets/appstore.png"
                 alt="appstore"
+                onclick="appStoreRedirect()"
               />
             </div>
           </div>

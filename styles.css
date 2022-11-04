@@ -59,7 +59,7 @@ body {
   justify-content: flex-start;
 }
 .getinto {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -183,7 +183,7 @@ p {
   }
 }
 /** >>>>>>>>>>> Resposive Design <<<<<<<<<<<*/
-@media screen and (max-height: 485px) {
+@media screen and (max-height: 500px) {
   .rigth-side {
     height: 0vh;
     width: 0vw;
@@ -193,8 +193,64 @@ p {
     width: 100%;
   }
 }
-
-@media screen and (max-width: 556px) {
+@media screen and (max-height: 900px) {
+  .info-container {
+    z-index: 25;
+  }
+  .slider {
+    overflow-y: auto;
+  }
+  /** >>>>>> Scrollbar <<<<<< */
+  .slider::-webkit-scrollbar {
+    width: 13px;
+    height: 10px;
+  }
+  .slider::-webkit-scrollbar-track-piece {
+    border-radius: 2px;
+    background-clip: content-box;
+    border-radius: 6px;
+    border: solid 4px transparent;
+  }
+  .slider::-webkit-scrollbar-track-piece:decrement {
+    background-clip: content-box;
+    border: solid 4px transparent;
+  }
+  .slider::-webkit-scrollbar-thumb {
+    background-color: #010d33;
+    width: 4px;
+    border-radius: 6px;
+  }
+  .slider::-webkit-scrollbar-track {
+    /*background: #EFF7F8;*/
+    background: #ffffff5e;
+    border-radius: 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .getinto {
+    width: 150%;
+  }
+  .info-container {
+    width: 90%;
+  }
+  /** fonts*/
+  p {
+    font-size: 2.8vw;
+  }
+  /*logo*/
+  .logo-main {
+    width: 90%;
+    align-self: center;
+  }
+  /** >>>>>>>>>>> Images <<<<<<<<<<<<*/
+  .img-phone {
+    width: 50%;
+  }
+  .img-item-phone {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
   .slider {
     flex-direction: column;
     overflow-y: auto;
@@ -205,8 +261,33 @@ p {
   .left-side {
     width: 100%;
   }
-}
-@media screen and (max-width: 576px) {
+  .getinto {
+    width: 100%;
+  }
+  .apps {
+    justify-content: center;
+  }
+  /** >>>>>>>>>>> Images <<<<<<<<<<<<*/
   .img-item-phone {
+    width: 32%;
+    margin-bottom: 10px;
+  }
+  /** fonts*/
+  p {
+    font-size: 2.6vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /** >>>>>>>>>>> Images <<<<<<<<<<<<*/
+  .img-phone {
+    width: 80%;
+  }
+  .img-item-phone {
+    width: 80%;
+  }
+  /** >>>>>>>>> Fonts<<<<<<<<<<*/
+  p {
+    font-size: 3.5vw;
   }
 }
