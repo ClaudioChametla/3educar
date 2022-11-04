@@ -237,6 +237,7 @@ p {
   p {
     font-size: 2.8vw;
   }
+
   /*logo*/
   .logo-main {
     width: 90%;
@@ -251,6 +252,16 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
+  body {
+    background-image: radial-gradient(
+      circle,
+      #2a0554,
+      #23084f,
+      #1d0a49,
+      #170b43,
+      #120b3d
+    );
+  }
   .slider {
     flex-direction: column;
     overflow-y: auto;
@@ -267,6 +278,11 @@ p {
   .apps {
     justify-content: center;
   }
+  .enjoy {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
   /** >>>>>>>>>>> Images <<<<<<<<<<<<*/
   .img-item-phone {
     width: 32%;
@@ -276,9 +292,20 @@ p {
   p {
     font-size: 2.6vw;
   }
+  .blue-font {
+    font-size: 6vw;
+  }
+  .green-font {
+    font-size: 6vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  body {
+    background-image: url(./assets/cover-small.png);
+    background-position: top left;
+    background-size: 100% 100%;
+  }
   /** >>>>>>>>>>> Images <<<<<<<<<<<<*/
   .img-phone {
     width: 80%;
