@@ -185,12 +185,24 @@ p {
 /** >>>>>>>>>>> Resposive Design <<<<<<<<<<<*/
 @media screen and (max-height: 500px) {
   .rigth-side {
-    height: 0vh;
-    width: 0vw;
+    height: 0px;
+    width: 0px;
     opacity: 0;
   }
   .left-side {
     width: 100%;
+  }
+  .img-container {
+    width: 0px;
+    height: 0px;
+  }
+  .img-item-phone {
+    width: 0px;
+    height: 0px;
+  }
+  .img-phone {
+    width: 0px;
+    height: 0px;
   }
 }
 @media screen and (max-height: 900px) {
@@ -312,6 +324,7 @@ p {
   }
   .img-item-phone {
     width: 80%;
+    margin-bottom: 55px;
   }
   /** >>>>>>>>> Fonts<<<<<<<<<<*/
   p {
