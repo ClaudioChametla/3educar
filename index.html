@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" type="text/css" />
     <title>Educar</title>
   </head>
-  <body>
+  <body onload="load($event)">
     <div class="slider">
       <section class="left-side">
         <div class="info-container">
@@ -49,10 +49,11 @@
       </section>
       <section class="rigth-side">
         <div class="img-container">
-          <div class="img-mask"></div>
+          <img id="item-phone" class="img-item-phone" src="./assets/mask.png" />
           <img class="img-phone" src="./assets/phone.png" alt="Smartphone" />
         </div>
       </section>
     </div>
+    <script src="./WindowsSize.js"></script>
   </body>
 </html>
