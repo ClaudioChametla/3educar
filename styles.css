@@ -226,6 +226,12 @@ p {
   .apps {
     margin-bottom: 20%;
   }
+  .blue-font {
+    font-size: 5vw;
+  }
+  .green-font {
+    font-size: 5vw;
+  }
 }
 @media screen and (max-height: 930px) {
   .info-container {
